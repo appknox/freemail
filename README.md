@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/willwhite/freemail.svg?branch=master)](https://travis-ci.org/willwhite/freemail)
+[![Build Status](https://travis-ci.org/wearespindle/freemail.svg?branch=master)](https://travis-ci.org/wearespindle/freemail)
 
 # freemail
 
@@ -16,9 +16,9 @@ domains directly by opening a pull request.
 
 There are three key data files in this project:
 
-- [free.txt](https://github.com/willwhite/freemail/blob/master/data/free.txt) contains a list of domains that are known to provide free email service
-- [disposable.txt](https://github.com/willwhite/freemail/blob/master/data/disposable.txt) contains a list of domains that are known to provide disposable email service
-- [blacklist.txt](https://github.com/willwhite/freemail/blob/master/data/blacklist.txt) contains a list of domains that this project will refuse to add to either list
+- [free.txt](https://github.com/wearespindle/freemail/blob/master/data/free.txt) contains a list of domains that are known to provide free email service
+- [disposable.txt](https://github.com/wearespindle/freemail/blob/master/data/disposable.txt) contains a list of domains that are known to provide disposable email service
+- [blacklist.txt](https://github.com/wearespindle/freemail/blob/master/data/blacklist.txt) contains a list of domains that this project will refuse to add to either list
 
 Domains may only be a member of one list.
 
@@ -28,27 +28,6 @@ Run `./update` to pull in the latest domains from the sources listed in
 `sources.txt`. All new domains will be placed in `free.txt` by default.
 If any domains provide disposable email service, they may be moved to
 `disposable.txt`.
-
-## Node
-
-### Install
-
-```
-npm install --save freemail
-```
-
-```javascript
-var freemail = require('freemail');
-freemail.isFree('smith@gmail.com');
-> true
-freemail.isFree('jack@mailinater.com');
-> true
-freemail.isDisposable('smith@gmail.com');
-> false
-freemail.isDisposable('jack@mailinater.com');
-> true
-
-```
 
 ## Python
 
@@ -60,7 +39,7 @@ pip install freemail
 
 ```python
 >>> import freemail
->>> freemail.is_free('jack@mailinater.com')
+>>> freemail.is_free('smith@gmail.com')
 True
 >>> freemail.is_free('jack@mailinater.com')
 True

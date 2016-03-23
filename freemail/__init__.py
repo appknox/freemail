@@ -1,8 +1,10 @@
+import os
 import tldextract
 import subprocess
 
-free_file = './data/free.txt'
-disp_file = './data/disposable.txt'
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+free_file = os.path.join(__location__, './data/free.txt')
+disp_file = os.path.join(__location__, './data/disposable.txt')
 
 
 def is_free(email_address):
