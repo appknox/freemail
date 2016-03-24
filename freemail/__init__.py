@@ -8,7 +8,9 @@ disp_file = os.path.join(__location__, './data/disposable.txt')
 
 
 def is_free(email_address):
-    if not isinstance(email_address, str):
+    try:
+        email_address = str(email_address)
+    except:
         raise TypeError('email must be a string')
 
     with open(free_file, 'r') as free, open(disp_file, 'r') as disposable:
@@ -19,7 +21,9 @@ def is_free(email_address):
 
 
 def is_disposable(email_address):
-    if not isinstance(email_address, str):
+    try:
+        email_address = str(email_address)
+    except:
         raise TypeError('email must be a string')
 
     with open(disp_file, 'r') as disposable:
