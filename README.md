@@ -48,3 +48,7 @@ False
 >>> freemail.is_disposable('jack@mailinater.com')
 True
 ```
+
+## Other
+
+- [freemail-cli](https://github.com/danielstjules/freemail-cli) is a CLI tool for filtering free and disposable emails
