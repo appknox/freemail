@@ -15,7 +15,7 @@ def is_free(email_address):
 
     with open(free_file, 'r') as free, open(disp_file, 'r') as disposable:
         domain_list = free.read().splitlines() + disposable.read().splitlines()
-        domain = tldextract.extract(email_address.split('@')[1]).registered_domain
+        domain = tldextract.extract(email_address).registered_domain
 
         return domain in domain_list
 
@@ -28,7 +28,7 @@ def is_disposable(email_address):
 
     with open(disp_file, 'r') as disposable:
         domain_list = disposable.read().splitlines()
-        domain = tldextract.extract(email_address.split('@')[1]).registered_domain
+        domain = tldextract.extract(email_address).registered_domain
 
         return domain in domain_list
 
