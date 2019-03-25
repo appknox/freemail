@@ -39,7 +39,6 @@ for source in $sources; do
 done;
 
 curl --silent https://raw.githubusercontent.com/ivolo/disposable-email-domains/master/index.json | jq -r .[] >> $new
-
 tmp=$(mktemp -t freemailXXX)
 cat $new \
     | sed '/./,$!d' \
